@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <script src="admin.js"></script>
+    <title></title>
+</head>
+<body>
+<h1>Manage Guard Duties</h1>
+<div id="guard-duty-form">
+    <label for="professor-name">Professor Name:</label>
+    <input type="text" id="professor-name" name="professor-name" required>
+
+    <label for="guard-duty-day">Day:</label>
+    <select id="guard-duty-day" name="guard-duty-day" required>
+        <option value="">Select a day</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+    </select>
+
+    <label for="guard-duty-time">Time:</label>
+    <select id="guard-duty-time" name="guard-duty-day" required>
+        <option value="">Select a day</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+        <option value="18:00">18:00</option>
+        <option value="19:00">19:00</option>
+        <option value="20:00">20:00</option>
+        <option value="21:00">21:00</option>
+    </select>
+
+    <label for="guard-duty-place">Place:</label>
+    <input type="text" id="guard-duty-place" name="guard-duty-place" required>
+
+    <input type="button" value="Add Guard Duty" onclick="addGuardDuty()">
+</div>
+<div style="display: flex;">
+    <table id="guard-duty-table">
+    </table>
+    <div id="professor-list">
+        <label for="professor-selector"></label><select id="professor-selector" ></select>
+        <ul id="guard-duties-list"></ul>
+    </div>
+</div>
+</body>
+</html>
+

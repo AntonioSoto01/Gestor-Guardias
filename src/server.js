@@ -34,6 +34,7 @@ app.delete('/api/guards/:id', (req, res) => {
 app.put('/api/guards/:id', (req, res) => {
     const guardId = parseInt(req.params.id, 10);
     const guardToUpdate = guardias.find(guard => guard.id === guardId);
-    guardToUpdate.name = req.body.name;
+    Object.assign(guardToUpdate, req.body);
+
     res.json(guardias);
 });
